@@ -1,0 +1,120 @@
+# All occurrences of "Holo" / "Holoq" have been replaced with "SYNAPSE" (none were present).
+
+1. Gradient Relocation: ∇_θ L = 𝔼[∇_θ log p(x|θ) · f(x)] → ∇_θ L = 𝔼[Φ(x,θ) · f(x)]
+2. Classical Attention with Quantum Analogy: A(Q,K,V)=softmax(QKᵀ/√d) V → A(Q,K,V)=∫ ψ_Q*(x) ψ_K(x) V(x) dx
+3. Topology-Aware LayerNorm: y = γ(x−μ)/√(σ²+ε) + β → y = H*(x−μ)/√(σ²+ε) + β, with H a homology-group action
+4. Manifold-Respecting Pooling: MaxPool(x) → MP(x) = ∫_𝓜 K(x,y) f(y) dy, where 𝓜 is the data manifold
+5. Information Bottleneck Objective: min I(X;T) − β I(T;Y) → min ∫ p(t|x) log[p(t|x)/p(t)] dx − β ∫ p(y|t) log[p(y|t)/p(y)] dt
+6. Neural ODEs with Lie Symmetry: ẋ = f(z,t,θ) → ẋ = ∑_i α_i(t) X_i(z), with {X_i} a Lie-algebra basis
+7. Riemannian Adam Update: θ_{t+1}=θ_t − α (√(v_t+ε))^{-1} m_t → θ_{t+1} = exp_{θ_t}\big(−α (√(G^{-1} v_t + ε))^{-1} m_t\big), G = metric tensor
+8. Diffeomorphic Augmentations for Robustness: x' = x + ε → x' = φ(x), with φ ∈ Diff(𝓜)
+9. Continual Learning via Synaptic Intelligence: L += c∑ (θ_i−θ_i*)² / max(ω_i, ξ) → L += c ∫ (θ(x)−θ*(x))² / max(ω(x), ξ) dx
+10. Meta-Metric Few-Shot Learning: d(x,y)=‖f(x)−f(y)‖² → d(x,y)=∫_𝓜 g(f(x),f(y)) dV, g learned
+
+11. Self-Supervision with TDA: L = L_CE + λ L_TDA, with L_TDA = ∑_k β_k L_k, L_k penalizes k-th Betti features
+12. Hyperbolic Contrastive Learning: L = −log( exp(s(x,x+)/τ) / ∑ exp(s(x,x−)/τ) ) → L = −log( exp(d_ℍ(f(x),f(x+))/τ) / ∑ exp(d_ℍ(f(x),f(x−))/τ) )
+13. Curriculum via Entropy Regularization: L += λ H(p(y|x)) → L += λ ∫ H(p(y|x,t)) dt, t = curriculum time
+14. MoE with Gumbel-Softmax Routing: y = ∑ softmax(g(x)) f_i(x) → y = ∑ GumbelSoftmax(g(x)) f_i(x)
+15. Conditional Compute with Reinforced Gates: z=σ(Wx+b) → z=σ(Wx+b) · 𝟙[a>0], with a ~ π(a|x)
+16. Sparse–Dense Hybrid Layers: y=Wx → y=(S∘W)x + D x, S sparse, D low-rank
+17. Low-Rank Tensors for Inference: W ≈ ∑_{r} a_r ⊗ b_r → W ≈ CP(T), T higher-order tensor
+18. Bayesian Pruning with Structure: p(w|D) ∝ p(D|w)p(w) → p(S,w|D) ∝ p(D|S,w) p(w|S) p(S), S structure
+19. Variational Flows: q_φ(z|x) → q_φ(z|x) = f_φ(ε), ε ~ p(ε), f invertible
+20. Introspective Energy-GAN: D(x) = −log ∑ exp(−E(x)) → D(x) = −log ∑ exp(−E(G(z))), z ~ p(z)
+
+21. Faster Diffusion via Learned ODE Solvers (refs [2],[6]): dx/dt = f(x,t), f is a learned neural ODE
+22. Score-Based Refinement with Langevin: (ref [20]) dx/dt = f(x,t) + √(2/β(t)) dW, W Wiener
+23. Meta-Discovery of Scaling Laws: (ref [10]) L(θ) = ∑ L_i(θ) → L(θ,α) = ∑ L_i(θ, α_i), α scaling
+24. Distilling Datasets via Wasserstein Flows: (refs [5],[21]) ∂_t ρ = −∇·(ρ ∇(δF/δρ)), F functional
+25. Schrödinger-Bridge Synthesis: (ref [22]) ∂_t ψ = −∇·(b ψ) + (1/2) Δψ, b = score field
+26. Active Learning by Info Gain: (ref [5]) I(y;θ|x,D) = H(y|x,D) − 𝔼_{y~p(y|x,θ)}[ H(θ|x,y,D) ]
+27. Contextual Thompson Sampling: (ref [15]) a_t ~ p(a|x_t, θ_t), θ_t ~ p(θ|D_{t−1})
+28. Latent Dynamics for MBRL: (ref [6]) s' = f(s,a) → z' = f(z,a), with s = g(z)
+29. Distributional RL Stability: (ref [18]) Z_{t+1} = r + γ Z_t', Z return distribution
+30. Information-Directed Sampling: (refs [26],[27]) a_t = argmax  𝔼[I(θ;y_t|x_t,a_t,D)] / √(𝔼[regret(a_t)])
+
+31. Adversarial Imitation for IRL: (refs [20],[28]) min_θ max_ψ 𝔼[D(s,a)] − 𝔼[ log D(s, π(s)) ]
+32. Multi-Agent Opponent Modeling: (refs [27],[31]) Q_i(s,a) = r_i(s,a) + γ ∑_{j≠i} π_j(a_j|s) Q(s',a')
+33. Federated Secure Aggregation: (ref [16]) W = (∑ n_i W_i)/N → W = SecureSum(n_i W_i) / SecureSum(n_i)
+34. Split Learning + HE: (ref [33]) y = f₂(f₁(x)) → y = f₂( Enc(f₁(x)) )
+35. DP via Rényi: (ref [5]) ε-DP → (α, ε)-RDP with D_α(P(M(D)) || P(M(D'))) ≤ ε
+36. NAS with Evolution Strategies: (refs [14],[23]) θ_{t+1} = θ_t + α (1/σ) ∑ Δθ_i · R(θ_i)
+37. Bayesian HPO: (ref [36]) α_t = argmax EI(α), EI = expected improvement
+38. Explainability via Integrated Grads: (ref [1]) IG(x) = (x−x') · ∫_0^1 ∇ f(x' + α(x−x')) dα
+39. Adversarial Training Variants: (ref [8]) min 𝔼[ max L(θ, x+δ) ] → min 𝔼[ ρ-adv(L(θ,·))(x) ]
+40. Fairness via Optimal Transport: (ref [24]) T#μ = ν, T fair map, μ, ν distributions
+
+41. Privacy with MPC: (refs [33],[34]) [x] = Share(x), y = f([x])
+42. Mixed-Precision for Efficiency: (ref [16]) W = α · clip( round(W/α), −2^{b−1}, 2^{b−1}−1 )
+43. Hardware-Aware Design: (refs [36],[42]) L += λ ∑ b_i c_i, b_i bitwidth, c_i cost
+44. STDP Neuromorphic Rule: (ref [9]) Δw = A⁺ e^{−Δt/τ⁺} if Δt>0 else A⁻ e^{Δt/τ⁻}
+45. Local Hebbian Updates: (refs [1],[44]) Δw_{ij} = η (a_i a_j − w_{ij})
+46. IB in Deep Nets: (refs [5],[12]) L = H(Y|T) + β I(X;T)
+47. Random Projection Dimensionality Drop: (refs [4],[16]) x' = R x, R random
+48. Diffusion Maps Manifold Learning: (refs [4],[21]) K = exp(−‖x_i−x_j‖²/ε), Φ_{ij} = K_{ij}/(D_i D_j)^{1/2}
+49. TDA Features: (refs [11],[48]) L = ∑ β_k · pers(H_k(X)), pers = persistence
+50. Geometric DL on Non-Euclidean Domains: (refs [6],[48]) Δ f = div(∇ f) → Δ_g f = div_g(∇_g f)
+
+51. GNN with Attention Aggregation: (refs [2],[50]) h'_i = ∑_j α_{ij} Θ h_j, α_{ij} = softmax(aᵀ[Θh_i ∥ Θh_j])
+52. Multi-Head Attention Refinements: (refs [2],[51]) MH(Q,K,V) = Concat(head₁,…,head_h) W_O
+53. Memory-Augmented DNCs: (refs [15],[52]) y_t = W[ h_t, r_t ], r_t = ∑ w_{i,t} M_t[i]
+54. Neural ODEs for Continuous Depth: (refs [6],[21]) dz/dt = f(z,t,θ)
+55. Deep Equilibria (Implicit Layers): (ref [54]) z* = f(z*, x), y = g(z*)
+56. NTK for Infinite Width: (refs [7],[54]) Θ(x,x') = 𝔼[ ∇_θ f(x,θ)ᵀ ∇_θ f(x',θ) ]
+57. Mean-Field Infinite-Width Limit: (ref [56]) ∂_t θ(x,t) = − 𝔼[ δL/δf · ∇_θ f(x, θ_t) ]
+58. Continuous Sparsification & Lottery Tickets: (refs [16],[57]) ∂_t θ(x,t) = −η m(t) ∇L, m(t) = mask
+59. Double-Descent via Phase Transitions: (refs [23],[57]) 𝔼[L] ≈ (n−d)^{−α} + (d/n)^β, d = param dim
+60. Input-Gradient Regularization: (refs [8],[39]) L += λ 𝔼[ ‖∇_x f(x)‖² ]
+
+61. OGD for Continual Learning: (refs [9],[58]) θ_{t+1} = θ_t − η (I − W Wᵀ) ∇L
+62. Prototypical Few-Shot Protocols: (refs [10],[51]) d(x,c_k) = ‖f_φ(x) − c_k‖²
+63. Zero-Shot with Semantic Embeddings: (refs [12],[62]) y = argmax_y s(f(x), e(y)), e = class embedding
+64. CPC-Style Self-Supervision: (refs [11],[46]) L = −log( exp(zᵀk⁺) / ∑ exp(zᵀk_i) )
+65. Hyperbolic Contrastive Distance: (refs [12],[50]) d(x,y) = acosh(1 + 2‖x−y‖² / ((1−‖x‖²)(1−‖y‖²)) )
+66. Competence-Based Curricula: (refs [13],[27]) p(i) ∝ exp( −(c(i)−μ)² / (2σ²) ), c = competence
+67. Hierarchical MoE Routing: (refs [14],[52]) y = ∑_i ∑_j g_{ij} f_{ij}(x), g_{ij} hierarchical gates
+68. Adaptive Inference Graphs: (refs [15],[54]) z_{t+1} = z_t + f(z_t, x) · δ(t), δ = halting signal
+69. ℓ₀-Like Sparsity Penalties: (refs [16],[60]) L += λ ∑ (1 − e^{−α|w_i|})
+70. Tensor-Ring Low-Rank: (refs [17],[50]) W ≈ Tr(G₁, G₂, …, G_d), G_i core tensors
+
+71. Tensor Decompositions for Compression: (refs [17],[70]) W ≈ CP(λ, A, B, C), i.e., CANDECOMP/PARAFAC
+72. Neural Processes (Probabilistic Models): (refs [18],[54]) z ~ p(z|x_{1:n}, y_{1:n}), y* ~ p(y*|x*, z)
+73. Faster VI with Normalizing Flows: (refs [19],[54]) z = f(ε), ε ~ p(ε), f invertible
+74. Continuous Normalizing Flows: (refs [19],[73]) z(t) = z(0) + ∫_0^t f(z(s), s) ds
+75. Energy-Based Contrastive Divergence: (refs [20],[64]) L = 𝔼[E(x)] − 𝔼[E(x^−)], x^− ~ p(x^−|x)
+76. GAN Stabilization via Spectral Norm: (refs [20],[60]) W ← W / σ_max(W)
+77. DDIM Acceleration: (refs [21],[74]) x₀ = f_θ(x_t, t)
+78. Annealed Langevin for Scores: (refs [22],[77]) x_{t+1} = x_t + ε ∇ log p(x_t) + √(2ε) z
+79. Neural Scaling via Intrinsic Dimension (ref): uncover laws using intrinsic-dimension estimates across model/data scales
+
+# Ten high-impact pairings
+
+1) (1 + 6) Gradient Relocation + Lie-symmetric Neural ODEs  
+   A physics-informed rethinking of credit assignment that could push depth/complexity while baking symmetry into the dynamics.
+
+2) (21 + 54) Learned ODE Solvers + Neural ODEs  
+   Treating generation as continuous-time could slash steps while keeping (or boosting) fidelity.
+
+3) (28 + 72) Latent Dynamics MBRL + Neural Processes  
+   Probabilistic latent world-models promise sample-efficient RL with principled uncertainty and transfer.
+
+4) (46 + 64) Information Bottleneck + CPC  
+   Explicitly optimizing for relevance may yield compact, task-useful self-supervised representations.
+
+5) (50 + 65) Geometric DL + Hyperbolic Contrastive  
+   Non-Euclidean priors plus contrastive learning for graphs/hierarchies can capture rich relational structure.
+
+6) (55 + 68) Deep Equilibrium + Conditional Computation  
+   Input-adaptive implicit networks that vary effective depth/compute on the fly.
+
+7) (56 + 59) NTK Insights + Double Descent  
+   Theory combo to steer architectures/training away from pitfalls and toward beneficial overparameterization regimes.
+
+8) (61 + 66) OGD Continual Learning + Competence Curricula  
+   Lifelong learners that sequence tasks by ability while avoiding interference.
+
+9) (67 + 70) Hierarchical MoE + Tensor-Ring  
+   Massive, efficient experts via low-rank structure to tame memory/compute.
+
+10) (74 + 78) CNFs + Score-Based Langevin  
+    Blending invertible flows with score methods for expressive, trainable generative models.
