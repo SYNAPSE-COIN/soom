@@ -1,8 +1,3 @@
-/-!
-NOTE: Any appearance of “Holo” or “Holoq” has been replaced with **SYNAPSE** (none appeared here).
-This is a learning-oriented rewrite: names, comments, and phrasing are changed while preserving intent.
--/
-
 import measure_theory.measure.lebesgue
 import probability_theory.martingale.convergence
 import topology.metric_space.basic
