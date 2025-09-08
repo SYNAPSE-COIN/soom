@@ -1,0 +1,66 @@
+1. Topological codes add global protection (199).  
+2. Quantum universality requires distinct notions (1).  
+3. Universal gate sets anchor equivalence (2).  
+4. MBQC reframes computation as measurements (3).  
+5. Restricted quantum models may be classically easy (108).  
+6. Linear optics provides special-purpose regimes (5).  
+7. Adiabatic computation parallels annealing (6).  
+8. Reversibility constraints differ quantumly (1).  
+9. Reversible circuits quantify entropy cost (8).  
+10. Landauer sets thermodynamic lower bounds (9).  
+11. Quantum communication complexity is separate territory (1).  
+12. Quantum fingerprinting offers sharp separations (11).  
+13. Teleportation alters communication models (12).  
+14. Quantum info theory changes entropy arguments (1).  
+15. Quantum entropy measures behave differently (14).  
+16. Channel capacity theory recasts limits (15).  
+17. Quantum cryptography needs bespoke assumptions (117).  
+18. QKD exemplifies information-theoretic security (17).  
+19. Quantum signatures show authentication nuances (18).  
+20. Quantum ZK modifies knowledge leakage (75).  
+21. Quantum commitments enforce binding/hiding tradeoffs (20).  
+22. Quantum OT reframes primitive availability (21).  
+23. Quantum money raises unforgeability in physics (1).  
+24. Public-key quantum money proposes verifiable tokens (23).  
+25. Quantum lightning explores unclonable states (24).  
+26. Quantum pseudorandomness deviates from classical (1).  
+27. Quantum PRGs test indistinguishability under unitaries (26).  
+28. t-designs approximate Haar randomness (27).  
+29. Supremacy metrics require calibration (162).  
+30. Cross-entropy benchmarking tests sampling fidelity (29).  
+31. Quantum volume summarizes hardware capability (30).  
+32. Error mitigation ≠ error correction (105).  
+33. Dynamical decoupling reduces decoherence (32).  
+34. Extrapolation estimates zero-noise observables (33).  
+35. “Quantum advantage” demands careful definitions (1).  
+36. Variational hybrids may supply near-term gains (35).  
+37. Quantum-inspired classical methods blur lines (36).  
+38. Superposition queries change oracle models (81).  
+39. Quantum-walk algorithms map graph structure (38).  
+40. Adversary methods give query lower bounds (39).  
+41. Hybrids complicate clean class boundaries (1).  
+42. QC-classical variational loops are a distinct model (41).  
+43. Quantum-assisted optimization reframes cost (42).  
+44. Quantum annealing alters landscape traversal (1).  
+45. Adiabatic QC links to Hamiltonian complexity (44).  
+46. QAOA again—approximation via shallow circuits (45).  
+47. Quantum ML needs its own complexity lens (1).  
+48. Quantum SVMs provide kernel-like power (47).  
+49. Quantum neural nets define novel hypothesis classes (48).  
+50. Dimensionality reduction has quantum analogues (1).  
+51. Quantum PCA extracts principal subspaces (50).  
+52. Quantum autoencoders compress amplitudes (51).  
+53. Quantum metrology adds precision complexity (1).  
+54. Quantum Fisher information bounds estimators (53).  
+55. Heisenberg scaling changes resource tradeoffs (54).  
+56. Quantum sensing redefines signal models (1).  
+57. NV centers give concrete sensing platforms (56).  
+58. Squeezed states enhance measurement precision (57).  
+59. Quantum simulation is a separate complexity terrain (1).  
+60. Trotterization approximates time evolution (59).  
+61. Qubitization yields optimal block-encodings (60).  
+62. Quantum computation graphs need alternate calculus (1).  
+63. ZX-calculus rewrites circuits diagrammatically (62).  
+64. Tensor networks compress entanglement structure (63).  
+65. Quantum-inspired classical solvers merit distinct analysis (37).  
+66. Tensor-network renormalization offers multiscale structure (65).  
