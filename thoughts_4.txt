@@ -8,3 +8,13 @@
 8. x' = x + ε → x' = φ(x), φ ∈ Diff(M)
 9. L += c∑(θi-θi*)²/max(ωi,ξ) → L += c∫(θ(x)-θ*(x))²/max(ω(x),ξ)dx
 10. d(x,y) = ||f(x)-f(y)||² → d(x,y) = ∫M g(f(x),f(y))dV
+11. L = LCE + λLTDA, LTDA = ∑βkLk, Lk
+12. L = -log(exp(s(x,x+)/τ)/∑exp(s(x,x-)/τ)) → L = -log(exp(dH(f(x),f(x+))/τ)/∑exp(dH(f(x),f(x-))/τ))
+13. L += λH(p(y|x)) → L += λ∫H(p(y|x,t))dt
+14. ∑softmax(g(x))fi(x) → y = ∑Gumbel-Softmax(g(x))fi(x)
+15. σ(Wx+b) → z = σ(Wx+b) * (a>0), a ~ π(a|x)
+16. (S○W)x + Dx, S: sparse, D: low-rank
+17. W ≈ ∑r a_i ⊗ b_i → W ≈ CP-decomp(T)
+18. p(w|D) ∝ p(D|w)p(w) → p(S,w|D) ∝ p(D|S,w)p(w|S)p(S)
+19. qφ(z|x) → qφ(z|x) = f(ε;φ), ε ~ p(ε)
+20. D(x) = -log∑exp(-E(x)) → D(x) = -log∑exp(-E(G(z))), z ~ p(z)
