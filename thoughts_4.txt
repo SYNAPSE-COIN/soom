@@ -1,10 +1,10 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+1. ∇θL = E[∇θlog p(x|θ) · f(x)] → ∇θL = E[Φ(x,θ) · f(x)]
+2. A(Q,K,V) = softmax(QK^T/√d)V → A(Q,K,V) = ∫ψQ*(x)ψK(x)V(x)dx
+3. γ(x-μ)/√(σ²+ε) + β → y = H*(x-μ)/√(σ²+ε) + β
+4. MP(x) = ∫M K(x,y)f(y)dy
+5. min I(X;T) - βI(T;Y) → min ∫p(t|x)log(p(t|x)/p(t))dx - β∫p(y|t)log(p(y|t)/p(y))dt
+6. dz/dt = f(z,t,θ) → dz/dt = ∑αi(t)Xi(z)
+7. α√(vt+ε)^(-1)mt → θt+1 = expθt(-α√(G^(-1)vt+ε)^(-1)mt)
+8. x' = x + ε → x' = φ(x), φ ∈ Diff(M)
+9. L += c∑(θi-θi*)²/max(ωi,ξ) → L += c∫(θ(x)-θ*(x))²/max(ω(x),ξ)dx
+10. d(x,y) = ||f(x)-f(y)||² → d(x,y) = ∫M g(f(x),f(y))dV
